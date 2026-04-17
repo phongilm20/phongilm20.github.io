@@ -1,0 +1,182 @@
+/* 
+--mono: 'DM Mono', monospace;
+  --serif: 'DM Serif Display', serif;
+  --sans: 'DM Sans', sans-serif;
+  */
+
+:root {
+  --background: #E0E0E0;
+  --background-nav: #424242;
+  --accent: #4b575c;
+  --text: #4b575c;
+  --text-nav: #E0E0E0;
+  --front-mono: 'DM Mono', monospace;
+  --front-serif: 'DM Serif Display', serif;
+  --front-sans: 'DM Sans', sans-serif;
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+/*body*/
+body {
+  background-color: var(--background);
+  font-family: var(--front-sans);
+  color: var(--text);
+  overflow-x: hidden;
+
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+
+  zoom: 0.9;
+}
+
+.blog-button::after {
+  content: "My Journey";
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+
+  font-size: small;
+  top: 60px;
+  right: 40px;
+}
+
+.blog-button:hover::after {
+  opacity: 1;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  margin: 0 auto;
+
+  background-color: var(--background-nav);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1rem;
+  color: var(--text-nav);
+  padding-left: 10%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  padding-right: 5%;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  color: var(--text-nav);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.profile-pic {
+  width: 300px;
+  height: auto;
+  clip-path: inset(0 0 10% 0 round 5%);
+  border-radius: 5%;
+}
+
+.hero {
+  display: flex;
+  padding-top: 110px;
+  padding-bottom: 130px;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  justify-content: center;
+
+}
+
+.hero-text {
+  padding-left: 10px;
+  font-size: 150%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#Experience {
+  padding: 15px 0;
+}
+
+.section-label {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+
+
+
+/* Experience */
+.item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem 0;
+  padding: 2rem 0;
+  align-items: start;
+
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.displaying {
+  align-items: center;
+  gap: 15px;
+  padding-left: 10px;
+}
+
+.bigtext {
+  margin-bottom: 4px;
+}
+
+.smalltext {
+  margin-top: 2px;
+}
+
+.meta {
+  text-align: right;
+  margin-top: 18px;
+}
+
+.mini-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.contact-link {
+  color: var(--text);
+}
